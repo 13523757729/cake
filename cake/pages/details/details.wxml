@@ -1,0 +1,33 @@
+<wxs src="../../utils/hh.wxs" module="filter"/>
+<view class="container">
+  <swiper>
+    <swiper-item wx:for="{{pic}}" wx:key="index">
+      <image src="{{item.top_pic}}"></image>
+    </swiper-item>
+  </swiper>
+  <view class='details_nav'>
+    <text class="title">{{list[0].title}}</text>
+    <text class="price">￥{{filter.as(list[0].price)}}</text>
+  </view>
+  <view class='freight'>
+    <text>运费 ￥0.00起</text>
+    <text>销量 {{list[0].salesvolume}}</text>
+  </view>
+  <view>
+    <view class="select">
+    <text>选择 尺寸 款式</text>
+    <image src="http://127.0.0.1:3200/img/details/back.png"></image>
+  </view>
+  <view class='distribution'>
+    <text>配送 同城送 自提</text>
+    <image src="http://127.0.0.1:3200/img/details/back.png"></image>
+  </view>
+  </view>
+  <view class="details">
+    <image mode='widthFix' wx:for="{{pic}}" wx:key="index" src="{{item.bottom_pic}}"></image>
+  </view>
+  <view class='cart'>
+    <view>立即购买</view>
+    <view bindtap='addcart' data-list="{{list[0].id}}">加入购物车</view>
+  </view>
+</view>

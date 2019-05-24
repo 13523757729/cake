@@ -1,0 +1,42 @@
+<view class="containner">
+  <input bindtap='gosearch' disabled='true' type="search" placeholder="搜索商品"></input>
+  <!-- 轮播图 -->
+  <swiper indicator-dots="true" indicator-active-color="red" circular="true" autoplay='true' interval='2000'>
+    <swiper-item wx:for="{{list}}" wx:key="index">
+      <image src="{{item.imgUrl}}"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 九宫格 -->
+  <view class="cake_nav">
+    <navigator hover-class='none' wx:for="{{list2}}" wx:key="index" class="nav_item" url="{{item.url}}">
+      <image src="{{item.imgurl}}"></image>
+      <text>{{item.title}}</text>
+    </navigator>
+  </view>
+  <!-- 热卖产品 -->
+  <view class="hotSale" wx:for="{{list3}}" wx:key="index" style="background-image:url({{item.imgurl}})">
+    <view class="title">{{item.title}}</view>
+    <navigator class='look' url="{{item.url}}">点击查看</navigator>
+  </view>
+  <!-- 蛋糕列表 -->
+  <view class="cakeList">
+    <view class="cakeItem" wx:for="{{list4}}" wx:key="index">
+      <image class='cake' src="{{item.img_url}}" bindtap='todetails' data-item="{{item.id}}"></image>
+      <text class='caketitle'>{{item.title}}</text>
+      <view class="price">
+        <text class='cakeprice'>￥{{item.price}}</text>
+        <image class='cart' bindtap='addcart' data-item="{{item.id}}" src="http://127.0.0.1:3200/img/index/cart.png"></image>
+      </view>
+    </view>
+    <navigator class='lookmore' url="/pages/product/product">查看更多</navigator>
+  </view>
+  <!-- 温馨提示 -->
+   <image class="botimg" mode="widthFix"  src="http://127.0.0.1:3200/img/index/bottom1.jpg"></image>
+  <view class='index_bot'>
+    <view class='hint'>温馨提示</view>
+    <view class='hinttext'>
+      <image mode="widthFix" src="http://127.0.0.1:3200/img/index/bottomtext.jpg"></image>
+    </view>
+  </view>
+  <view class="store">———————— · 店铺信息 · ————————</view>
+</view>

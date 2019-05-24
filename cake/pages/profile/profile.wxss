@@ -1,0 +1,151 @@
+.userbg{
+  width:100%;
+  height:300rpx;
+  background-image:url(http://127.0.0.1:3200/img/profile/user.jpg);
+  background-size:100%,100%;
+  line-height:300rpx;
+  padding:30rpx;
+}
+.userbg button{
+  background-color:transparent;
+  color:#fff;
+  margin-top:13%;
+}
+.userbg button::after{
+  border-radius: 0;
+}
+.userinfo{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+}
+.userinfo-avatar{
+  width:120rpx;
+  height:120rpx;
+  border-radius:50%;
+  margin-right:40rpx;
+}
+.userinfo-nickname{
+  color:#fff;
+}
+.login-text{
+  background-color:#fff;
+  font-size:12px;
+  padding:20rpx;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between; 
+  align-items: center;
+}
+.loginbtn{
+  width:100rpx;
+  height:55rpx;
+  font-size:12px;
+  line-height: 55rpx;
+  padding:0 10rpx;
+  border-radius:0;
+  background-color:#f00;
+  border:none;
+  color:#fff;
+  margin:0;
+}
+.loginbox{
+  width:100%;
+  height:1150rpx;
+  background-color:rgba(0,0,0,0.6);
+  position:fixed;
+  z-index:99999;
+}
+.profiles,.proList{
+  width:100%;
+  padding:20rpx;
+  box-sizing:border-box;
+}
+.myprofile{
+  margin-top:20rpx;
+  padding: 0 20rpx;
+  border-radius:7px;
+  background:#fff;
+  height:260rpx;
+}
+.myorder,.orderform{
+  display: flex;
+  flex-direction:row;
+  align-items: center; 
+}
+.myorder{
+  width:100%;
+  height:100rpx;
+  justify-content: space-between;
+  font-size:16px;
+  font-weight:600;
+  box-sizing: border-box;
+  border-bottom:1rpx solid #ddd;
+}
+.orderform text{
+  font-size:14px;
+  color:#666;
+  font-weight:400;
+}
+.orderform image{
+  width:50rpx;
+  height:50rpx;
+} 
+.goodsState{
+  width:100%;
+  height:150rpx;
+  font-size:14px;
+  color:#707070;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.goodsicon{
+  width:50rpx;
+  height:50rpx;
+  margin-bottom:6rpx;
+}
+.groodgroup{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:20%;
+}
+.proitem image{
+  width:40rpx;
+  height:40rpx;
+}
+.proleft,.proitem{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+}
+.proitem{
+  justify-content: space-between; 
+  font-size:14px;
+  color:#606060;
+  background-color: #fff;
+  height:100rpx;
+  padding:0 20rpx;
+  border-radius:7rpx;
+  border-bottom:1rpx solid #ddd;
+}
+.proicon{
+  margin-right:10rpx;
+}
+.proitem:nth-child(4),
+.proitem:nth-child(5),
+.proitem:last-child{
+  border-bottom:0;
+}
+.proitem:nth-child(5){
+  margin:20rpx 0;
+}
+.store{
+  padding:20rpx 0;
+  box-sizing:border-box;
+  font-size:12px;
+  color:#888;
+  text-align: center;
+}

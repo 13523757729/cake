@@ -1,0 +1,134 @@
+.container input{
+  width:85%;
+  height:80rpx;
+  /* border:1rpx solid black; */
+  background:#fff;
+  font-size:35rpx;
+  line-height: 50rpx;
+  padding:0 80rpx;
+  margin: auto;
+  margin-top:10rpx;
+  background-image: url(http://127.0.0.1:3200/img/index/search.png);
+  background-size:48rpx;
+  background-repeat: no-repeat;
+  background-position:3% center;
+  box-sizing: border-box;
+}
+.search{
+  display: flex;
+  flex-direction:row;
+  align-items: center; 
+  padding:20rpx;
+}
+.search button{
+  width:15%;
+  height:80rpx;
+  border:0;
+  border-radius:0;
+  padding:0;
+  line-height:80rpx;
+  font-size:16px;
+  background-color:#eee;
+  color:#666;
+  margin:0;
+}
+.search button::after{
+  border-radius: 0;
+  border:0;
+}
+.searpast{
+  padding:20rpx;
+}
+.histitle{
+  font-size:14px;
+  color:#666;
+}
+.histext{
+  font-size:14px;
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap; 
+  margin-top:20rpx;
+}
+.histext text{
+  display: block;
+  height:60rpx;
+  margin-right:15rpx;
+  text-align: center;
+  line-height: 60rpx;
+  padding:0 15rpx;
+  background-color:#eaeaea;
+  color:#666;
+  margin-top:20rpx;
+}
+.deletebox{
+  display:flex;
+  justify-content: center;
+  margin-top:30rpx;
+}
+.deletebtn{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width:280rpx;
+  height:70rpx;
+  border:1px solid #666;
+  justify-content: center;
+  border-radius: 50rpx;
+}
+.deleteimg{
+  width:30rpx;
+  height:30rpx;
+  margin-right:10rpx;
+}
+.deletetext{
+  font-size:14px;
+  color:#666;
+}
+.cakelist{
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  height:200rpx;
+  padding:20rpx;
+  box-sizing: border-box;
+  border-top:1px solid #ddd;
+  background-color:#fff;
+}
+.cakeimg{
+  width:25%;
+  height:150rpx;
+}
+.cakeimg image{
+  width:150rpx;
+  height:150rpx;
+  
+}
+.caketitle{
+  font-size:20px;
+  margin-top:10rpx;
+}
+.price{
+  font-size:14px;
+  margin-top:50rpx;
+  color:#666;
+}
+.price text:first-child{
+  color:#f00;
+  font-size:18px;
+  margin-right:80rpx;
+ } 
+ .noimg{
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ .noimg image{
+   width:300rpx;
+   height:300rpx;
+   margin-bottom:20rpx;
+ }
+ .noimg text{
+   font-size:16px;
+   color:#666;
+ }

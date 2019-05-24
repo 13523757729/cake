@@ -1,0 +1,5 @@
+var as=function(val){
+  return val.toFixed(2)
+  
+}
+module.exports = {as:as}

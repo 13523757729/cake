@@ -1,0 +1,73 @@
+.addr{
+  width: 100%;
+  background-color:#fff;
+  padding:0  20rpx;
+  margin-top:20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height:180rpx;
+  box-sizing: border-box;
+}
+.addrlist{
+  width:85%;
+}
+.user{
+  font-size:14px;
+  font-weight:600;
+  display: flex;
+  margin-bottom:10rpx;
+}
+.user text:first-child{
+  margin-right:20rpx;
+  
+}
+.addrde,.user text:first-child{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.addrde{
+  font-size:12px;
+  color:#666;
+}
+.upd image{
+  width:60rpx;
+  height:60rpx;
+  /* border:1px solid #ddd; */
+}
+.insaddr{
+  width:100%;
+  height:80rpx;
+  background-color:#f00;
+  color:#fff;
+  text-align: center;
+  line-height: 80rpx;
+  font-size:16px;
+  position:fixed;
+  bottom:0;
+}
+.noaddr image{
+  width:150rpx;
+  height:150rpx;
+  margin-bottom:30rpx;
+}
+.noaddr{
+  height:100vh;
+  width:100%;
+}
+.noaddr view{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color:#999;
+  font-size:16px;
+  width:400rpx;
+  position: fixed;
+  top:50%;
+  left:50%;
+  margin-left:-200rpx;
+  margin-top:-200rpx;
+
+}

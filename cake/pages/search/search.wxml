@@ -1,0 +1,46 @@
+<view class="container">
+<!-- 搜索框 -->
+  <form bindsubmit='searchKey'>
+  <view class='search'>
+      <input type="search" bindinput='searText' name="key" focus="{{inpfocus}}" placeholder="搜索商品" value='{{key}}'></input>
+      <button formType='submit' disabled='{{disabled}}'>搜索</button>
+    </view>
+  </form>
+  
+  <!-- 搜索历史 -->
+  <view class="searpast" hidden="{{hiddenName}}">
+  <text class="histitle">历史记录</text>
+  <!-- 历史记录文字 -->
+  <view class='histext'>
+    <text wx:for="{{listerr}}"  data-text="{{item}}" wx:key="key" bindtap='this_value' bindtap='getvalue'>{{item}}</text>
+  </view>
+  <!-- 清空记录 -->
+  <view class='deletebox'>
+    <view class="deletebtn" bindtap='deletetext'>
+      <image class='deleteimg' src="http://127.0.0.1:3200/img/search/delete.png"></image>
+      <text class="deletetext">清空历史搜索</text>
+    </view>
+  </view>
+  </view>
+  <!-- 搜索结果 -->
+  <view class="searchresult" animation="{{animationData}}"  >
+    <view wx:if="{{list.length>0}}">
+      <view class="cakelist" wx:for="{{list}}" wx:key="index" catchtap='todetail'>
+      <view class='cakeimg'>
+        <image src="{{item.img_url}}"></image>
+      </view>
+      <view class='caketitle'>
+        <text>{{item.title}}</text>
+        <view class="price">
+          <text>￥{{toFiixed(item.price)}}</text>
+          <text>销量:{{item.salesvolume}}</text>
+        </view>
+      </view>
+    </view>
+    </view>
+    <view class='noimg' wx:if="{{list.length==0}}">
+      <image class='noget' src="http://127.0.0.1:3200/img/search/sorry1.gif"></image>
+      <text>抱歉！没有找到你想要的商品</text>
+    </view> 
+  </view>
+</view>

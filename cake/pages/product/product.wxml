@@ -1,0 +1,10 @@
+ <view class="cakeList">
+    <view class="cakeItem" wx:for="{{cakelist}}" wx:key="index">
+      <image class='cake' src="{{item.img_url}}" bindtap='todetails' data-item="{{item.id}}"></image>
+      <text class='caketitle'>{{item.title}}</text>
+      <view class="price">
+        <text class='cakeprice'>￥{{item.price}}</text>
+        <image class='cart' data-item="{{item.id}}" bindtap='addcart' src="http://127.0.0.1:3200/img/index/cart.png"></image>
+      </view>
+    </view>
+  </view>

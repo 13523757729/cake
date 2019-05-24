@@ -1,0 +1,46 @@
+<!-- 购物车列表 -->
+<view>
+  <view class='myshop'>
+    我的商品
+  </view>
+  <view wx:if="{{list.length>0}}">
+    <view class="cakeitem" wx:for="{{list}}" wx:key="index">
+    <view class='checkboxs'><checkbox></checkbox></view>
+    <view class="center">
+      <image  class='cakeimg' src="{{item.img_url}}"></image>
+    </view>
+    <view class="rightcom">
+      <view class="tide">
+      <text class='caketitle'>{{item.title}}</text>
+      <image class="delete" src="http://127.0.0.1:3200/img/cart/delete.png"></image>
+      </view>
+      <view class='pricebox'>
+        <text class="price">￥{{item.price}}</text>
+        <view class='btns'>
+          <button class="minus" disabled='true'>-</button>
+          <text class="count">1</text>
+          <button class='add'>+</button>
+        </view>
+      </view>
+      </view>
+  </view>
+    <!-- 总价结算 -->
+<view class='total'>
+  <view class="checkAll">
+    <checkbox></checkbox>
+    <text>全选</text>
+  </view>
+  <view class="totals">
+    <text>合计：<text class="totalpay">￥0.00</text></text>
+    <text>不含运费</text>
+  </view>
+  <button disabled='true' class="settle">结算(0)</button>
+</view>
+  </view>
+  <!-- 找不到 -->
+<view class='cartnull' wx:if="{{list.length==0}}">
+  <text class="text1">购物车快饿瘪了(⊙_⊙)</text>
+  <text class='text2'>快给我挑点宝贝</text>
+  <button class='goList'>去逛逛</button>
+</view>
+</view>

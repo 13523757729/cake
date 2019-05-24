@@ -1,0 +1,26 @@
+<view class="address">
+<!-- 地址列表 -->
+  <view class='addr' wx:for="{{list}}" wx:key="index" bindtap='updaddr' wx:if="{{list.length>0}}" data-item="{{item.id}}">
+    <view class='addrlist'>
+      <view class='user'>
+        <text>{{item.userName}},</text>
+        <text>{{item.tel}}</text>
+      </view>
+      <view class='addrde'>收获地址：{{item.province}}{{item.city}}{{item.district}}{{item.addr}}</view>
+    </view>
+    <view class='upd'>
+      <image src="http://127.0.0.1:3200/img/address/update.png" bindtap='updaddr' data-item="{{item.id}}"></image>
+    </view>
+  </view>
+  <!-- 添加地址 -->
+  <view class='insaddr' bindtap='inseaddr'>
+    新增收货地址
+  </view>
+  <!-- 没有地址 -->
+  <view class='noaddr' wx:if="{{list.length==0}}">
+    <view>
+      <image src="http://127.0.0.1:3200/img/address/null.png"></image>
+    <text>哎呀，你还没有收货地址哦</text>
+    </view>
+  </view>
+</view>

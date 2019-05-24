@@ -1,0 +1,61 @@
+.cakeList{
+  /* background-color:#fff; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* height: */
+  padding:20rpx;
+}
+.cakeList .cakeItem{
+  width:50%;
+  height: 450rpx;
+  /* padding:10px; */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;  /*元素按列排整*/
+  /*justify-content: center;  /*水平居中*/
+  align-items: center;    /*垂直居中*/
+}
+.cakeList .cakeItem:nth-child(odd){
+  padding-right:8rpx;
+}
+.cakeList .cakeItem:nth-child(even){
+  padding-left:8rpx;
+}
+.cakeList .cakeItem .cake{
+  width:100%;
+  height:300rpx;
+}
+.cakeList .cakeItem .caketitle{
+  font-size:14px;
+  margin-top:10rpx;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.cakeList .cakeItem .price{
+  width:100%;
+  padding:10rpx;
+  box-sizing: border-box;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.cakeList .cakeItem .cakeprice{
+  font-size:14px;
+  color:rgb(255, 0, 0);
+}
+.cakeList .cakeItem .cart{
+  width:35rpx;
+  height:35rpx;
+}
+.cakeList .lookmore{
+  text-align: center;
+  width:100%;
+  height:30px;
+  line-height: 30px;
+  border:1rpx solid #ddd;
+  font-size:14px;
+  color:#666;
+}

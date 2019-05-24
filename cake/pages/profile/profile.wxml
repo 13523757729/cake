@@ -1,0 +1,42 @@
+<!-- 头像 -->
+<view class='userbg'>
+    <view class="userinfo">
+    <button  wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="btn"> 获取头像昵称 </button>
+    <block wx:else class="user">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+    </view>
+  </view>
+    <!-- <view class='login-text'>
+    <text>登录手机号，同步全渠道订单和优惠券</text>
+    <button class="loginbtn" bindtap='loginshow'>登录</button>
+  </view> -->
+  <!-- 订单状态 -->
+  <view class='profiles'>
+    <view class='myprofile'>
+      <navigator hover-class='none' url="/pages/logs/logs" class="myorder">
+        <text>我的订单</text>
+        <view class='orderform'><text>查看订单</text>
+          <image src="http://127.0.0.1:3200/img/profile/back.png"></image>
+        </view>
+      </navigator>
+      <view class="goodsState">
+      <navigator hover-class='none' class="groodgroup" wx:for="{{list}}" wx:key="index" url="{{item.url}}">
+        <image class="goodsicon" src="{{item.img_url}}"></image>
+        <text>{{item.title}}</text>
+      </navigator>
+      </view>
+    </view>
+  </view>
+  <!-- 个人信息 -->
+  <view class='proList'>
+    <navigator  class="proitem" wx:for="{{list2}}" wx:key="index" url="{{item.url}}">
+      <view class="proleft">
+        <image class='proicon' src="{{item.img_url}}"></image>
+        <text>{{item.title}}</text>
+      </view>
+      <image src="http://127.0.0.1:3200/img/profile/back.png"></image>
+    </navigator> 
+  </view>
+  <view class="store">———————— · 个人中心 · ————————</view>
